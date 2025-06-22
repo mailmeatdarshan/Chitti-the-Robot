@@ -53,8 +53,8 @@
 ### 🔥 **INSTANT SETUP**
 ```bash
 # 1️⃣ Clone this beauty
-git clone https://github.com/yourusername/universal-ai-chatbot.git
-cd universal-ai-chatbot
+git clone https://github.com/mailmeatdarshan/Chitti-the-Robot.git
+cd Chitti-the-Robot
 
 # 2️⃣ Install the magic
 npm install
