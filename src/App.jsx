@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Assistant as AssistantClass } from "./assistants/anthropicai";
+import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Loader } from "./components/Loader/Loader";
 import { Chat } from "./components/Chat/Chat";
 import { Controls } from "./components/Controls/Controls";
@@ -73,16 +74,22 @@ function App() {
         <img className={styles.Logo} src="/Chitti.png" />
         <h2 className={styles.Title}>Hii,I'm Chitti The Robot</h2>
       </header>
-      <div className={styles.ChatContainer}>
-        <Chat messages={messages} />
-      </div>
-      <Controls
-        isDisabled={isLoading || isStreaming}
-        onSend={handleContentSend}
-      />
-      <div className={styles.Configuration}>
-        <Assistant onAssistantChange={handleAssistantChange} />
-        <Theme />
+      <div className={styles.Content}>
+        <Sidebar />
+
+        <main className={styles.Main}>
+          <div className={styles.ChatContainer}>
+            <Chat messages={messages} />
+          </div>
+          <Controls
+            isDisabled={isLoading || isStreaming}
+            onSend={handleContentSend}
+          />
+          <div className={styles.Configuration}>
+            <Assistant onAssistantChange={handleAssistantChange} />
+            <Theme />
+          </div>
+        </main>
       </div>
     </div>
   );
