@@ -1,6 +1,6 @@
 import { useRef, useEffect, useMemo } from "react";
 import Markdown from "react-markdown";
-import styles from "./Chat.module.css";
+import styles from "./Messages.module.css";
 
 const WELCOME_MESSAGE_GROUP = [
   {

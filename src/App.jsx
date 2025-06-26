@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Assistant as AssistantClass } from "./assistants/anthropicai";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Loader } from "./components/Loader/Loader";
-import { Chat } from "./components/Chat/Chat";
+import { Chat } from "./components/Messages/Messages";
 import { Controls } from "./components/Controls/Controls";
 import { Assistant } from "./components/Assistant/Assistant";
 import { Theme } from "./components/Theme/Theme";
