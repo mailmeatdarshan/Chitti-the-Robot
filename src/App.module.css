@@ -52,3 +52,9 @@
   font-size: 14px;
   opacity: 0.8;
 }
+
+@media screen and (max-width: 768px) {
+  .Header {
+    padding-left: 0;
+  }
+}
