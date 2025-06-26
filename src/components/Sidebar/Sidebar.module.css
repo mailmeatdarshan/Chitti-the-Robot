@@ -1,0 +1,40 @@
+.Sidebar {
+  flex-shrink: 0;
+  width: 260px;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.Chats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Chat[data-active="true"] .ChatButton {
+  background: light-dark(#ffffff, #212121);
+  border-color: transparent;
+  cursor: default;
+}
+
+.ChatButton {
+  width: 100%;
+  padding: 12px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ChatButton:hover {
+  border-color: light-dark(#d3d3d3, #3f3f3f);
+}
+
+.ChatTitle {
+  white-space: nowrap;
+  overflow: hidden;
+}
