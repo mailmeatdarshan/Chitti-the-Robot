@@ -25,6 +25,8 @@
   flex-direction: column;
   flex-grow: 1;
   gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .Logo {
@@ -42,6 +44,30 @@
   background: light-dark(#ffffff, #212121);
   border-radius: 16px;
   overflow-y: auto;
+}
+
+.Welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 32px;
+  text-align: center;
+  gap: 24px;
+  color: light-dark(#212121, #ffffff);
+}
+
+.Welcome img {
+  width: 200px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.Welcome h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 .Configuration {

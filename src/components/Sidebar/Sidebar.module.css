@@ -1,9 +1,31 @@
 .Sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   flex-shrink: 0;
   width: 260px;
   padding: 8px;
   border-radius: 16px;
   transition: transform 0.3s ease-in-out;
+}
+
+.NewChatButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: light-dark(#ffffff, #2f2f2f);
+  border: 1px solid light-dark(#d3d3d3, #3f3f3f);
+  border-radius: 12px;
+  color: light-dark(#212121, #ffffff);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.NewChatButton:hover {
+  background: light-dark(#f0f0f0, #3a3a3a);
 }
 
 .MenuButton {
@@ -29,7 +51,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.3s ease-in-out;
@@ -38,35 +60,63 @@
 .Chats {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow-y: auto;
 }
 
-.Chat[data-active="true"] .ChatButton {
-  background: light-dark(#ffffff, #212121);
-  border-color: transparent;
-  cursor: default;
+.Chat {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.Chat:hover {
+  background: light-dark(#f0f0f0, #2f2f2f);
+}
+
+.Chat[data-active="true"] {
+  background: light-dark(#e5e5e5, #3a3a3a);
 }
 
 .ChatButton {
-  width: 100%;
-  padding: 12px;
+  flex: 1;
+  padding: 10px 12px;
   background: none;
-  border: 1px solid transparent;
-  border-radius: 8px;
+  border: none;
   text-align: left;
   cursor: pointer;
-}
-
-.ChatButton:hover {
-  border-color: light-dark(#d3d3d3, #3f3f3f);
+  overflow: hidden;
 }
 
 .ChatTitle {
+  font-size: 14px;
+  color: light-dark(#212121, #e3e3e3);
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.DeleteButton {
+  display: none;
+  padding: 8px;
+  background: none;
+  border: none;
+  color: light-dark(#757575, #9e9e9e);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.Chat:hover .DeleteButton {
+  display: block;
+}
+
+.DeleteButton:hover {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
 }
 
 @media screen and (max-width: 768px) {
